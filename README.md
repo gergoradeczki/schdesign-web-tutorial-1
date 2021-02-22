@@ -208,9 +208,9 @@ Az alábbi fájl/mappa struktúrához igazodjuk:
 
 ## 2. layout.css
 
-Lépésről léprésre helyezzükl el az elemeket.
+Lépésről léprésre helyezzük el az elemeket.
 
-Kapcsoljunk ki minden nem kellő tulajodnságot.
+Kapcsoljunk ki minden nem kellő tulajdonságot.
 
 ``` css
 /* Minden elemen beállítjuk ezeket */
