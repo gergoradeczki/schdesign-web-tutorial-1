@@ -496,3 +496,16 @@ Csak ne felejtsük el kikapcsolni mobil nézetben.
 ## Házi feladat
 
 A workshopon való jelenlét megszerzéséhez szükséges a házi feladatnak az elkészítése. Ehhez használd nyugodtan azt a kódot, amit a workshop ideje alatt készítettél, vagy az itt található mintakódot.
+
+- [A feladat szövege itt érhető el.](https://github.com/gergoradeczki/schdesign-web-tutorial-1/raw/main/homework/homework.pdf)
+
+### Feladatok
+
+1. Legyen egyszerűen sötét témájúvá váltható a naptár!
+   1. *Hint: lehet érdemes külön css fájlt és (1 db) osztályt létrehozni*
+2. Legyen több esemény stílus!
+   1. *Hint: most minden esemény ugyan olyan, lehessen pl. színt, szövegtípust stb. választani.*
+3. Legyen CSS változón keresztül módosítható a naptár tetejének és időoszlopának a színe!
+   1. *Hint: nézz utána hogyan kell CSS változót létrehozni és ügyelj arra, hogy jó helyen hozd őket létre.*
+
+Beadni a **gergo.radeczki [kukac] schdesign.hu** email címre lehet. Tárgynak add meg, hogy `[Webfejlesztés alapok HF]`.
