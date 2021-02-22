@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Roboto'; /* Ezen a néven fogunk tudni rá hivatkozni */
+    src: url('../font/Roboto-Regular.ttf') format('truetype'); /* Hol található és típusa */
+    /* Figyeljünk a címzésre!!! */
+}
+body {
+    font-family: 'Roboto'; /* A fentebb 'létrehozott' betűtípust használjuk fel */
+    background-image: url('../img/rough_bg.jpg'); /* Beállítjuk a letöltött hátteret */
+}
+main {
+    background-color: white; /* legyen fehér a háttér */
+    /* Ezt csak másoljuk le */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.dayName {
+    background-color: rgb(234,234,234); /* szürke háttérszín */
+    font-size: large; /* betű méret */
+    color: rgb(110,110,110); /* szövegszín */
+}
+.dayTime {
+    font-size: medium;
+    color: rgb(110,110,110);
+    text-align: center; /* Középre igazítjuk a szöveget */
+}
+.event {
+    background-color: rgb(23,166,151);
+    border-radius: 5px; /* lekerekítjük a négy sarkát */
+    color: white;
+    /* Fogadjuk el, hogy ez van */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.eventTitle {
+    font-size: medium;
+    font-weight: 400; /* Mennyire legyen félkövér */
+    word-wrap: break-word; /* Ha kell, akkor törd szét a szót, hogy ne lógjon túl */
+}
+.eventSubdivide .eventTitle, .length--1 .eventTitle {
+    overflow: hidden; /* Elrejtjük a görgetősávat */
+    white-space: nowrap; /* Szóköznél nem kezdünk új sort ha nincs elég hely */
+}
+.eventTime {
+    font-size: small; /* Az idő legyen kisebb */
+    font-weight: 300; /* Ne legyen annyira vastag */
+}
+.length--1 {
+    /* Mennyi cellát foglaljon el */
+    grid-row-end: span 1; /* 1, azaz 1 cellát foglaljon el */
+}
+.length--2 {
+    grid-row-end: span 2; /* 2, azaz 2 cellát foglaljon el */
+}
+.length--4 {
+    grid-row-end: span 4; /* 4, azaz 4 cellát foglaljon el */
+}
+
+/* Unortodox csíkozás */
+main {
+    background: repeating-linear-gradient(0deg, white, white 59px, rgb(234,234,234) 1px, rgb(234,234,234) 60px);
+}
+.day {
+    border-left: 1px solid rgb(234,234,234);
+}

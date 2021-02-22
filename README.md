@@ -1,0 +1,494 @@
+# schdesign-web-tutorial-1
+
+## Visual Studio Code
+
+- Letöltés: https://code.visualstudio.com/Download
+
+### Használandó kiegészítők
+
+A vscode-ot megnyitva bal oldalt találjuk meg a kiegészítőket *(Extensions)*. Itt keressünk rá az alábbiakra és telepítsük őket:
+
+- Live Server
+- Auto Rename Tag
+- CSS Peek
+- HTML CSS Support
+
+### Gyorsgombok
+
+| Gyorsgomb      | Mit csinál?                                                               |
+| -------------- | ------------------------------------------------------------------------- |
+| `CTRL+SHIFT+P` | Command Pallet megnyitása *(parancsokra tudunk rákeresni és kiadni őket)* |
+| `SHIFT+ALT+F`  | Kód automatikus formázása                                                 |
+
+## Projekthez szükséges fájlok
+
+A naptár ekészítése során az alábbi fájlok fognak nekünk kelleni:
+
+- [Roboto-Regular.ttf](https://github.com/gergoradeczki/schdesign-web-tutorial-1/raw/main/dependencies/Roboto-Regular.ttf)
+- [rough_bg.jpg](https://github.com/gergoradeczki/schdesign-web-tutorial-1/raw/main/dependencies/rough_bg.jpg)
+
+## Struktúra
+
+Az alábbi fájl/mappa struktúrához igazodjuk:
+
+- /
+  - css/
+    - layout.css
+    - responsive.css
+    - style.css
+  - font/
+    - Roboto-Regular.ttf
+  - img/
+    - rough_bg.jpg
+  - index.html
+
+## 1. index.html
+
+Írjuk meg a HTML-t.
+
+``` html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <title>Naptár</title>
+    </head>
+    <body>
+        <main>
+            <div class="time">
+                <div class="dayName"></div>
+                <div class="dayTimes">
+                    <div class="dayTime">07:00</div>
+                    <div class="dayTime">08:00</div>
+                    <div class="dayTime">09:00</div>
+                    <div class="dayTime">10:00</div>
+                    <div class="dayTime">11:00</div>
+                    <div class="dayTime">12:00</div>
+                    <div class="dayTime">13:00</div>
+                    <div class="dayTime">14:00</div>
+                    <div class="dayTime">15:00</div>
+                    <div class="dayTime">16:00</div>
+                    <div class="dayTime">17:00</div>
+                    <div class="dayTime">18:00</div>
+                    <div class="dayTime">19:00</div>
+                    <div class="dayTime">20:00</div>
+                </div>
+            </div>
+            <div class="day">
+                <div class="dayName">Hétfő</div>
+                <div class="dayEvents">
+                    <div class="event length--4" style="grid-row-start: 4;">
+                        <div class="eventTitle">Kommunikációs hálózatok 2</div>
+                        <div class="eventDetails">
+                            <div class="eventTime">10:00-14:00</div>
+                        </div>
+                    </div>
+                    <div class="event length--4" style="grid-row-start: 8;">
+                        <div class="eventTitle">Kommunikációs hálózatok 2</div>
+                        <div class="eventDetails">
+                            <div class="eventTime">14:00-18:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <div class="dayName">Kedd</div>
+                <div class="dayEvents">
+                    <div class="event length--2" style="grid-row-start: 4;">
+                        <div class="eventTitle">Algoritmus elmélet</div>
+                        <div class="eventDetails">
+                            <div class="eventTime">10:00-12:00</div>
+                        </div>
+                    </div>
+                    <div class="event length--2" style="grid-row-start: 6;">
+                        <div class="eventTitle">Szoftvertechnikák</div>
+                        <div class="eventDetails">
+                            <div class="eventTime">12:00-14:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <div class="dayName">Szerda</div>
+                <div class="dayEvents">
+                    <div class="event length--4" style="grid-row-start: 2;">
+                        <div class="eventTitle">Operációs rendszerek</div>
+                        <div class="eventDetails">
+                            <div class="eventTime">08:00-12:00</div>
+                        </div>
+                    </div>
+                    <div class="event length--2" style="grid-row-start: 6;">
+                        <div class="eventTitle">Szoftver projekt laboratórium</div>
+                        <div class="eventDetails">
+                            <div class="eventTime">12:00-14:00</div>
+                        </div>
+                    </div>
+                    <div class="event length--2" style="grid-row-start: 8;">
+                        <div class="eventTitle">Menedzsment és vállalkozásgazdaságtan</div>
+                        <div class="eventDetails">
+                            <div class="eventTime">14:00-16:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <div class="dayName">Csütörtök</div>
+                <div class="dayEvents">
+                    <div class="event length--2" style="grid-row-start: 4;">
+                        <div class="eventTitle">Operációs rendszerek</div>
+                        <div class="eventDetails">
+                            <div class="eventTime">10:00-12:00</div>
+                        </div>
+                    </div>
+                    <div class="eventSubdivide length--2" style="grid-row-start: 6;">
+                        <div class="event length--2" style="grid-row-start: 1;">
+                            <div class="eventTitle">Algoritmus elmélet</div>
+                            <div class="eventDetails">
+                                <div class="eventTime">12:00-14:00</div>
+                            </div>
+                        </div>
+                        <div class="event length--2" style="grid-row-start: 1;">
+                            <div class="eventTitle">Kotlin alapú szoftverfejlesztés</div>
+                            <div class="eventDetails">
+                                <div class="eventTime">12:00-14:00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event length--2" style="grid-row-start: 8;">
+                        <div class="eventTitle">Kommunikációs hálózatok 2</div>
+                        <div class="eventDetails">
+                            <div class="eventTime">14:00-16:00</div>
+                        </div>
+                    </div>
+                    <div class="event length--2" style="grid-row-start: 10;">
+                        <div class="eventTitle">Menedzsment és vállalkozásgazdaságtan</div>
+                        <div class="eventDetails">
+                            <div class="eventTime">16:00-18:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <div class="dayName">Péntek</div>
+                <div class="dayEvents">
+                    <div class="event length--2" style="grid-row-start: 2;">
+                        <div class="eventTitle">Grafika</div>
+                        <div class="eventDetails">
+                            <div class="eventTime">08:00-10:00</div>
+                        </div>
+                    </div>
+                    <div class="event length--2" style="grid-row-start: 4;">
+                        <div class="eventTitle">Operációs rendszerek</div>
+                        <div class="eventDetails">
+                            <div class="eventTime">10:00-12:00</div>
+                        </div>
+                    </div>
+                    <div class="event length--2" style="grid-row-start: 6;">
+                        <div class="eventTitle">Szoftvertechnikák</div>
+                        <div class="eventDetails">
+                            <div class="eventTime">12:00-14:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="day">
+                <div class="dayName">Szombat</div>
+            </div>
+            <div class="day">
+                <div class="dayName">Vasárnap</div>
+            </div>
+        </main>
+    </body>
+</html>
+```
+
+## 2. layout.css
+
+Lépésről léprésre helyezzükl el az elemeket.
+
+Kapcsoljunk ki minden nem kellő tulajodnságot.
+
+``` css
+/* Minden elemen beállítjuk ezeket */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Máshogy fog számolódni a Width és Height */
+}
+```
+
+Helyezzük középre a `<body>` tartalmát.
+
+``` css
+body {
+    min-height: 100vh; /* függőleges középhez kell */
+    display: flex; /* egyszerű lesz az elrendezés */
+    align-items: center; /* Függőlegesen középre rendezés */
+    justify-content: center; /* Vízszintesen középre rendezés */
+}
+```
+
+Rendezzük el a `<main>`-ben lévő *"oszlopokat"*
+
+``` css
+main {
+    display: flex; /* Tudjon reszponzívan nyúlni */
+    min-width: 0; /* Vékony kijelzőn nem lesz levágva az eleje */
+}
+```
+
+Adjuk meg az idősávnak és a napoknak az elvárt szélességet.
+
+``` css
+.time {
+    width: 60px;
+}
+.day {
+    width: 180px;
+}
+```
+
+Utána meg a napok neveit tegyük magasabbá és helyezzük el őket középen.
+
+``` css
+.dayName {
+    height: 60px; 
+    display: flex; /* Szeretjük a flexet, mert */
+    align-items: center; /* könnyen lehet benne */
+    justify-content: center; /* középre helyezni */
+}
+```
+
+Adjuk meg az oszlopok megjelenítését, majd rendezzük el az eseményeket.
+
+``` css
+.dayTimes, .dayEvents {
+    display: grid; /* Egyszerűen fogunk tudni 2D-ben dolgokat elhelyezni */
+    /* 14 darab 60px magas sorunk lesz */
+    grid-template-rows: repeat(14, 60px); /* Sorminta */
+}
+.event {
+    margin: 1px; /* Minden irányban 1px margó, így 2px-es rések jönnek létre */
+    padding: 15px 20px; /* Alul-felül 15px, jobbra-balra 20px kitöltés */
+}
+```
+
+Oldjuk meg az ütközés helyes megjelenését
+
+``` css
+.event {
+    margin: 1px; /* Minden irányban 1px margó, így 2px-es rések jönnek létre */
+    padding: 15px 20px; /* Alul-felül 15px, jobbra-balra 20px kitöltés */
+    /* Ha valami oknál fogva tovább akarna nyúlni, akkor ne */
+    max-width: 178px;
+}
+
+.eventSubdivide {
+    /* Szeretjük a flexet */
+    display: flex;
+}
+.eventSubdivide .event {
+    max-width: 88px; /* Ha valami oknál fogva tovább akarna nyúlni, akkor ne */
+}
+```
+
+Most egy csomó minden nem úgy működik ahogyan szeretnénk. Egészítsük ki az eventet és a felosztott eventet is.
+
+``` css
+.event {
+    margin: 1px; /* Minden irányban 1px margó, így 2px-es rések jönnek létre */
+    padding: 15px 20px; /* Alul-felül 15px, jobbra-balra 20px kitöltés */
+    /* Ha valami oknál fogva tovább akarna nyúlni, akkor ne */
+    max-width: 178px;
+}
+.eventSubdivide {
+    /* Szeretjük a flexet */
+    display: flex;
+}
+.eventSubdivide .event {
+    max-width: 88px; /* Ha valami oknál fogva tovább akarna nyúlni, akkor ne */
+}
+```
+
+## 3. style.css
+
+Első lépésként *"importáljuk"* az előre letöltött fájlokat a projektbe és használjuk fel őket egyből.
+
+``` css
+@font-face {
+    font-family: 'Roboto'; /* Ezen a néven fogunk tudni rá hivatkozni */
+    src: url('../font/Roboto-Regular.ttf') format('truetype'); /* Hol található és típusa */
+    /* Figyeljünk a címzésre!!! */
+}
+body {
+    font-family: 'Roboto'; /* A fentebb 'létrehozott' betűtípust használjuk fel */
+    background-image: url('../img/rough_bg.jpg'); /* Beállítjuk a letöltött hátteret */
+}
+```
+
+Különítsük el a naptárat a háttértől.
+
+``` css
+main {
+    background-color: white; /* legyen fehér a háttér */
+    /* Ezt csak másoljuk le */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+```
+
+Emeljük ki a legfelső sort, adjunk neki egy szürkés színt, legyen nagyobb a betűtípusa és más a szövegszín. Csináljunk egy ehhez hasonlót az első oszloppal is.
+
+``` css
+.dayName {
+    background-color: rgb(234,234,234); /* szürke háttérszín */
+    font-size: large; /* betű méret */
+    color: rgb(110,110,110); /* szövegszín */
+}
+.dayTime {
+    font-size: medium;
+    color: rgb(110,110,110);
+    text-align: center; /* Középre igazítjuk a szöveget */
+}
+```
+
+Most az eseményeknek adjunk stílust. Nézzük meg mi lenne, ha kikapcsolnánk a `max-width` tulajdonságot. Figyeljünk oda arra is, hogy esemény méretétől függően törjön a cím.
+
+``` css
+.event {
+    background-color: rgb(23,166,151);
+    border-radius: 5px; /* lekerekítjük a négy sarkát */
+    color: white;
+    /* Fogadjuk el, hogy ez van */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.eventTitle {
+    font-size: medium;
+    font-weight: 400; /* Mennyire legyen félkövér */
+    word-wrap: break-word; /* Ha kell, akkor törd szét a szót, hogy ne lógjon túl */
+}
+/* Csak az 1 óra hosszú, vagy az ütköző eseményeknél lesz aktiválva */
+.eventSubdivide .eventTitle, .length--1 .eventTitle {
+    overflow: hidden; /* Elrejtjük a görgetősávat */
+    white-space: nowrap; /* Szóköznél nem kezdünk új sort ha nincs elég hely */
+}
+.eventTime {
+    font-size: small; /* Az idő legyen kisebb */
+    font-weight: 300; /* Ne legyen annyira vastag */
+}
+```
+
+És végül, amitől hoszabbak lesznek.
+
+``` css
+.length--1 {
+    /* Mennyi cellát foglaljon el */
+    grid-row-end: span 1; /* 1, azaz 1 cellát foglaljon el */
+}
+.length--2 {
+    grid-row-end: span 2; /* 2, azaz 2 cellát foglaljon el */
+}
+.length--4 {
+    grid-row-end: span 4; /* 4, azaz 4 cellát foglaljon el */
+}
+```
+
+## 4. responsive.css
+
+Ha túl keskeny a kijelző, akkor nem a legjobb a megjelenés. Ezt javítsuk ki azzal, hogy még jobban reszponzívvá tesszük a naptárat.
+
+Kezdjük azzal, hogy megkeressük azt a pontot, ahol megtörni látszik a megjelenés.
+
+``` css
+/* 1380px vagy annál keskenyebb a kijelző, akkor aktiválódik */
+@media only screen and (max-width: 1380px) {
+    /* ide írjuk a további módosításokat */
+}
+```
+
+Ha nem tud a teljes naptár egészében megjelenni a kijelzőn, akkor legyen napi nézet.
+
+``` css
+main {
+    display: block; /* blokként jelenjen meg a tartalma */
+    max-width: 800px; /* Maximum eddig nyoljon szét a tartalom */
+    /* Helyezzük középre, de most használjunk valami régit */
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    display: block; /* flexel nem fog működni, így visszatérünk blockra */
+}
+```
+
+Rejtsük el az idő oszlopot, nem kell az nekünk.
+
+``` css
+.time {
+    display: none; /* Nem fog megjelenni */
+}
+```
+
+Apránként oldjuk meg, hogy minden szétnyúljon ebben a nézetben.
+
+``` css
+/* Ez mindennek a konténere, ha nem nyúlik szét, akkor semmi sem fog */
+.day {
+    width: 100%; /* Reszponzívan próbáld kitölteni a szabad helyet */
+}
+/* gridről térjünk át flexre, de oszlopos legyen a megjelenés */
+.dayEvents {
+    display: flex;
+    flex-direction: column;
+}
+.event {
+    margin: 5px 10px;
+    max-width: 100%; /* Használjuk fel az összes szabad helyet */
+}
+```
+
+Most már csak az ütköző elemekkel van probléma. Ehhez használjuk ki azt, hogy elég csak az egyiknek belső margót megadni. Így itt is marad a 10 pixel belső távolság.
+
+``` css
+/* Csak az ütköző eseményekre alkalmazzuk */
+.eventSubdivide .event {
+    /* Ezzel fogják fele-fele arányban elfoglalni a helyet */
+    min-width: calc(50% - 15px); /* Kiszámoljuk, mennyi legyen a minimális szélesség */
+}
+/* Elég csak az elsőnek a belső margoját módosítani */
+.eventSubdivide .event:first-child {
+    margin-right: 0;
+}
+```
+
+## Hogyan csíkozzuk be?
+
+Vegyük észre, hogy a vízszintes csíkozás lehetetlen. A függőleges még éppen, hogy lehetséges.
+
+De mi most mégis megoldjuk a vízszintes csíkozást egy 60px magas 1px széles képpel.
+
+``` css
+/* Unortodox csíkozás */
+main {
+    background: repeating-linear-gradient(0deg, white, white 59px, rgb(234,234,234) 1px, rgb(234,234,234) 60px);
+}
+.day {
+    border-left: 1px solid rgb(234,234,234);
+}
+```
+
+Csak ne felejtsük el kikapcsolni mobil nézetben.
+
+``` css
+@media only screen and (max-width: 1380px) {
+    main {
+        background: white;
+    }
+    .day {
+        border-left: none;
+    }
+}
+```

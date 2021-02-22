@@ -1,0 +1,46 @@
+/* Minden elemen beállítjuk ezeket */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Máshogy fog számolódni a Width és Height */
+}
+body {
+    min-height: 100vh; /* függőleges középhez kell */
+    display: flex; /* egyszerű lesz az elrendezés */
+    align-items: center; /* Függőlegesen középre rendezés */
+    justify-content: center; /* Vízszintesen középre rendezés */
+}
+main {
+    display: flex; /* Tudjon reszponzívan nyúlni */
+    min-width: 0; /* Vékony kijelzőn nem lesz levágva az eleje */
+}
+.time {
+    width: 60px;
+}
+.day {
+    width: 180px;
+}
+.dayName {
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dayTimes, .dayEvents {
+    display: grid; /* Egyszerűen fogunk tudni 2D-ben dolgokat elhelyezni */
+    /* 14 darab 60px magas sorunk lesz */
+    grid-template-rows: repeat(14, 60px); /* Sorminta */
+}
+.event {
+    margin: 1px; /* Minden irányban 1px margó, így 2px-es rések jönnek létre */
+    padding: 15px 20px; /* Alul-felül 15px, jobbra-balra 20px kitöltés */
+    /* Ha valami oknál fogva tovább akarna nyúlni, akkor ne */
+    max-width: 178px;
+}
+.eventSubdivide {
+    /* Szeretjük a flexet */
+    display: flex;
+}
+.eventSubdivide .event {
+    max-width: 88px; /* Ha valami oknál fogva tovább akarna nyúlni, akkor ne */
+}

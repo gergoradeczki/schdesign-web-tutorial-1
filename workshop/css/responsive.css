@@ -1,0 +1,46 @@
+@media only screen and (max-width: 1380px) {
+    main {
+        display: block; /* blokként jelenjen meg a tartalma */
+        max-width: 800px; /* Maximum eddig nyoljon szét a tartalom */
+        /* Helyezzük középre, de most használjunk valami régit */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body {
+        display: block; /* flexel nem fog működni, így visszatérünk blockra */
+    }
+    .time {
+        display: none; /* Nem fog megjelenni */
+    }
+    /* Ez mindennek a konténere, ha nem nyúlik szét, akkor semmi sem fog */
+    .day {
+        width: 100%; /* Reszponzívan próbáld kitölteni a szabad helyet */
+    }
+    /* gridről térjünk át flexre, de oszlopos legyen a megjelenés */
+    .dayEvents {
+        display: flex;
+        flex-direction: column;
+    }
+    .event {
+        margin: 5px 10px;
+        max-width: 100%; /* Használjuk fel az összes szabad helyet */
+    }
+    /* Csak az ütköző eseményekre alkalmazzuk */
+    .eventSubdivide .event {
+        /* Ezzel fogják fele-fele arányban elfoglalni a helyet */
+        min-width: calc(50% - 15px); /* Kiszámoljuk, mennyi legyen a minimális szélesség */
+    }
+    /* Elég csak az elsőnek a belső margoját módosítani */
+    .eventSubdivide .event:first-child {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 1380px) {
+    main {
+        background: white;
+    }
+    .day {
+        border-left: none;
+    }
+}
