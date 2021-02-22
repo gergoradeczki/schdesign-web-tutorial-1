@@ -492,3 +492,7 @@ Csak ne felejtsük el kikapcsolni mobil nézetben.
     }
 }
 ```
+
+## Házi feladat
+
+A workshopon való jelenlét megszerzéséhez szükséges a házi feladatnak az elkészítése. Ehhez használd nyugodtan azt a kódot, amit a workshop ideje alatt készítettél, vagy az itt található mintakódot.
