@@ -509,3 +509,5 @@ A workshopon való jelenlét megszerzéséhez szükséges a házi feladatnak az 
    1. *Hint: nézz utána hogyan kell CSS változót létrehozni és ügyelj arra, hogy jó helyen hozd őket létre.*
 
 Beadni a `gergo.radeczki@schdesign.hu` email címre lehet.<br>Tárgynak add meg, hogy `[Webfejlesztés alapok HF]`.
+
+- Határidő: **2021.03.03. 19:00**
