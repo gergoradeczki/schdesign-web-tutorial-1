@@ -468,7 +468,7 @@ Most már csak az ütköző elemekkel van probléma. Ehhez használjuk ki azt, h
 
 Vegyük észre, hogy a vízszintes csíkozás lehetetlen. A függőleges még éppen, hogy lehetséges.
 
-De mi most mégis megoldjuk a vízszintes csíkozást egy 60px magas 1px széles képpel.
+De mi most mégis megoldjuk a vízszintes csíkozást a *repeating-linear-gradient* használva.
 
 ``` css
 /* Unortodox csíkozás */
